@@ -34,7 +34,6 @@ class _IntroScreenState extends State<IntroScreen>
 
   @override
   Widget build(BuildContext context) {
-    final color = Colors.white;
 
     return MaterialApp(
       home: Scaffold(
@@ -45,15 +44,16 @@ class _IntroScreenState extends State<IntroScreen>
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 120.0),
+                    padding: const EdgeInsets.only(top: 110.0),
                     child: Text("TIC TAC TOE",
-                    style: myNewFontWhite.copyWith(fontSize: 30),
+                    style: myNewFontWhite.copyWith(fontSize: 20),
                     ),
                   ),
                 ),
                 Expanded(
                   flex: 2,
                   child: Container(
+                    margin: const EdgeInsets.only(top: 30),
                     decoration: BoxDecoration(
                       border: Border.all(
                         style: BorderStyle.none,
