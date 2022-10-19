@@ -11,10 +11,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(''),
-      ),
-      body: Container(),
-    );
+        backgroundColor: Colors.grey[800],
+        body: GridView.builder(
+          itemCount: 9,
+            gridDelegate:
+                const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+            itemBuilder: (context, index) {
+              return Center(
+                child: Text(index.toString(),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
+                    ),),
+              );
+            }));
   }
 }
