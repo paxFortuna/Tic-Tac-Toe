@@ -45,7 +45,7 @@ class _IntroScreenState extends State<IntroScreen>
               children: [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.only(top: 120.0),
+                    padding: const EdgeInsets.only(top: 120.0),
                     child: Text("TIC TAC TOE",
                     style: myNewFontWhite.copyWith(fontSize: 30),
                     ),
@@ -82,7 +82,7 @@ class _IntroScreenState extends State<IntroScreen>
                   onTap: (){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder:(context) => HomePage()),
+                      MaterialPageRoute(builder:(context) => const HomePage()),
                     );
                   },
                   child: Padding(
