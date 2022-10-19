@@ -8,6 +8,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  // the first player is oh
+  bool ohTurn = true;
+
   List<String> displayExOh = [
     '',
     '',
@@ -55,7 +59,23 @@ class _HomePageState extends State<HomePage> {
 
   void _tapped(int index) {
     setState(() {
-      displayExOh[index] = 'o';
+     if(ohTurn){
+       displayExOh[index] = 'o';
+     } else {
+       displayExOh[index] = 'x';
+     }
+
+     ohTurn = !ohTurn;
+     _checkWinner();
+
     });
+  }
+
+  void _checkWinner() {
+
+  }
+
+  void _showWinDialog() {
+
   }
 }
